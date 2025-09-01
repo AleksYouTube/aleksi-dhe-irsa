@@ -1,0 +1,45 @@
+@font-face {
+            font-family: 'Super Vanilla';
+            src: url(Super\ Vanilla.ttf);
+        }
+        body {
+            margin: 0px;
+            padding: 0px;
+            background: #DF86BD;
+            background: radial-gradient(circle,rgba(223, 134, 189, 1) 0%,
+                                               rgba(243, 189, 224, 1) 75%,
+                                               rgba(243, 240, 245, 1) 99%);
+        }
+        ul {
+            margin: 25px 50px;
+            padding: 0px;
+            list-style-type: none;
+
+            /*background: rgb(0, 255, 0);*/
+        }
+        li {
+            margin-right: 50px;
+            display: inline-block;
+            font-family: 'Super Vanilla';
+
+            /*background: rgb(0, 255, 0);*/
+        }
+        div {
+            margin: 0px;
+            padding: 0px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /*background: rgb(0, 255, 0);*/
+            height: 80vh;
+        }
+        h1 {
+            margin: 0px;
+            padding: 0px;
+
+            font-family: 'Super Vanilla';
+            color: aliceblue;
+            font-size: 8vw;
+        }
