@@ -1,45 +1,58 @@
 @font-face {
-            font-family: 'Super Vanilla';
-            src: url(Super\ Vanilla.ttf);
-        }
-        body {
-            margin: 0px;
-            padding: 0px;
-            background: #DF86BD;
-            background: radial-gradient(circle,rgba(223, 134, 189, 1) 0%,
-                                               rgba(243, 189, 224, 1) 75%,
-                                               rgba(243, 240, 245, 1) 99%);
-        }
-        ul {
-            margin: 25px 50px;
-            padding: 0px;
-            list-style-type: none;
-
-            /*background: rgb(0, 255, 0);*/
-        }
-        li {
-            margin-right: 50px;
-            display: inline-block;
-            font-family: 'Super Vanilla';
-
-            /*background: rgb(0, 255, 0);*/
-        }
-        div {
-            margin: 0px;
-            padding: 0px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            /*background: rgb(0, 255, 0);*/
-            height: 80vh;
-        }
-        h1 {
-            margin: 0px;
-            padding: 0px;
-
-            font-family: 'Super Vanilla';
-            color: aliceblue;
-            font-size: 8vw;
-        }
+    font-family: 'Super Vanilla';
+    src: url(Super\ Vanilla.ttf);
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    background: #DF86BD;
+    background: radial-gradient(circle,
+                              rgba(223, 134, 189, 1) 0%,
+                              rgba(243, 189, 224, 1) 66%,
+                              rgba(243, 240, 245, 1) 100%);
+}
+a {
+    text-decoration: none;
+    user-select: none;
+}
+.navigation-list {
+    margin: 30px 50px;
+    padding: 0px;
+    list-style-type: none;
+}
+.navigation-list li {
+    display: inline-block;
+}
+.navigation-list li a {
+    margin-left: 20px;
+    padding: 5px 10px;
+    color: rgba(223, 134, 189, 1);
+    font-family: 'Super Vanilla';
+    font-size: 25px;
+    text-transform: capitalize;
+}
+.navigation-list li:first-child a {
+    margin-left: 0px;
+}
+.navigation-list li a:hover {
+    color: aliceblue;
+    background-color: #DF86BD;
+    border-radius: 10px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+}
+section {
+    /*background: rgb(0, 255, 0);*/
+    height: 80vh;
+}
+.timer {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Super Vanilla';
+    color: aliceblue;
+    font-size: 8vw;
+    user-select: none;
+    text-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3);
+}
