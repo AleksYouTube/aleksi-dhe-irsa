@@ -1,0 +1,56 @@
+/* ========== Fonts ========== */
+@font-face {
+    font-family: 'Mono Medium';
+    src: url('../fonts/JetBrainsMono-Medium.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: #000000;
+    color: #ff0000;
+    font-family: 'Mono Medium';
+    user-select: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+
+.header header {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.login-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 240px;
+    height: 480px;
+    padding: 30px;
+}
+
+.input-box .input-field {
+    width: 100%;
+    height: 60px;
+    font-size: 17px;
+    padding: 0 25px;
+    box-shadow: 0px 5px 1000px 100px #440000;
+    border-radius: 10px;
+    border-style:none;
+}
+
+.input-field:hover {
+    box-shadow: 0px 5px 1000px 100px #4f0000;
+}
