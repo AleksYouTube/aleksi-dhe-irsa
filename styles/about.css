@@ -1,0 +1,73 @@
+/* ========== Fonts ========== */
+@font-face {
+    font-family: 'Super Vanilla';
+    src: url('../fonts/Super Vanilla.ttf');
+}
+
+/* ========== Timer Section ========== */
+
+.about-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 5vh;
+    height: 10vh;
+    left: 0;
+    width: 100%;
+}
+
+.about-title {
+    /* Removed position: fixed */
+    font-family: 'Super Vanilla';
+    font-size: 4vw;
+    text-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3);
+    color: aliceblue;
+    user-select: none;
+    line-height: 1;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 15vh;
+    height: 75vh;
+    left: 0;
+    width: 100%;
+}
+
+.about-image {
+    position: fixed;
+    top: 25vh;
+    height: 55vh;
+    right: calc(50% + 0.5vw);
+
+    border-radius: 2vh;
+    box-shadow: -10px 10px 25px #DF86BD;
+}
+
+.about-text {
+    position: fixed;
+    top: 25vh;
+    height:55vh;
+    left: calc(50% + 0.5vw);
+    width: 36.7vh;
+
+    text-align: left;
+    font-size: 1.2vw;
+
+    color: aliceblue;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.about-text a {
+    color: #DF86BD;
+}
+
+.about-text a:hover {
+    color: aliceblue;
+}

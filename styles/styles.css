@@ -8,10 +8,9 @@
 body {
     margin: 0;
     padding: 0;
-    background: radial-gradient(circle,
-    rgba(223, 134, 189, 1) 0%,
-    rgba(243, 189, 224, 1) 66%,
-    rgba(243, 240, 245, 1) 100%);
+    position: fixed;
+    inset: 0; /* shorthand for top, right, bottom, left = 0 */
+    background: rgba(243, 189, 224, 1);
     font-family: 'Super Vanilla';
 }
 
@@ -20,41 +19,56 @@ a {
     user-select: none;
 }
 
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    height: 5vh;
+    width: 100%;
+}
+
 /* ========== Navigation ========== */
 .navigation-list {
-    margin: 30px 50px;
+    margin: 0;
     padding: 0;
     list-style: none;
+    
     display: flex;
     align-items: center;
+
+    position: fixed;
+    top: 0;
+    height: 5vh;
+    width: 100%;
 }
 
 .navigation-list li {
-    display: inline-block;
+    display: flex;               /* Makes vertical centering of <a> easier */
+    align-items: center;
+    height: 5vh;
 }
 
-.navigation-list li:not(:last-child) a {
-    margin-left: 20px;
-}
-
+.navigation-list li:not(:last-child) a,
 .navigation-list li:first-child a {
-    margin-left: 0;
+    margin-left: 1vw;
 }
 
 .navigation-list li:last-child {
     margin-left: auto;
+    margin-right: 1vw;
 }
 
 .navigation-list li a {
-    padding: 5px 10px;
     color: rgba(223, 134, 189, 1);
     font-size: 25px;
     text-transform: capitalize;
+    padding: 5px 10px;
+    line-height: 1; /* No need to match the height exactly */
 }
 
 .navigation-list li a:hover {
     color: aliceblue;
     background-color: #DF86BD;
-    border-radius: 10px;
+    border-radius: 30px;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
 }
