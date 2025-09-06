@@ -10,7 +10,7 @@ body {
     padding: 0;
     position: fixed;
     inset: 0; /* shorthand for top, right, bottom, left = 0 */
-    background: rgba(243, 189, 224, 1);
+    background: rgb(243, 189, 224);
     font-family: 'Super Vanilla';
 }
 
@@ -40,6 +40,7 @@ nav {
     top: 0;
     height: 5vh;
     width: 100%;
+    background-color: rgb(243, 189, 224);
 }
 
 .navigation-list li {
