@@ -1,0 +1,6 @@
+# Step 1: Generate palette with transparency support
+ffmpeg -framerate 18 -i boba_%04d.png -t 2 -vf "fps=18,scale=512:-1:flags=lanczos,palettegen=reserve_transparent=1" palette.png
+
+# Step 2: Use that palette to generate final transparent GIF
+ffmpeg -framerate 18 -i boba_%04d.png -i palette.png -t 2 -filter_complex "[0:v]fps=18,scale=512:-1:flags=lanczos[x];[x][1:v]paletteuse" -plays 0 boba.gif
+

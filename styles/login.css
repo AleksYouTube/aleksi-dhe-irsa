@@ -1,9 +1,3 @@
-/* ========== Fonts ========== */
-@font-face {
-    font-family: 'Mono Medium';
-    src: url('../fonts/JetBrainsMono-Medium.ttf');
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -11,8 +5,22 @@
 
     background-color: #000000;
     color: #ff0000;
-    font-family: 'Mono Medium';
-    user-select: none;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* This stretches it to fill the entire screen */
 }
 
 body {
@@ -20,16 +28,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-}
-
-.header {
-    text-align: center;
-    margin: 20px 0 40px 0;
-}
-
-.header header {
-    font-size: 30px;
-    font-weight: 600;
+    position: relative;
+    z-index: 1;
 }
 
 .login-box {
@@ -39,18 +39,14 @@ body {
     width: 240px;
     height: 480px;
     padding: 30px;
+    background-color: rgba(0, 0, 0, 0); /* Optional: adds transparency */
+    z-index: 2;
+    position: relative;
 }
 
 .input-box .input-field {
     width: 100%;
     height: 60px;
-    font-size: 17px;
+    font-size: 2em;
     padding: 0 25px;
-    box-shadow: 0px 5px 1000px 100px #440000;
-    border-radius: 10px;
-    border-style:none;
-}
-
-.input-field:hover {
-    box-shadow: 0px 5px 1000px 100px #4f0000;
 }

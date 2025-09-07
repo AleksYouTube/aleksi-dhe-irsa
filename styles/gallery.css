@@ -62,7 +62,7 @@ body {
     height: 100%;
     object-fit: contain;
     object-fit: cover;
-    background-color: #00ff00;
+    /*background-color: #DF86BD;*/
     object-position: 50% 50%;
     cursor: pointer;
     transition: 0.25s ease-in-out;
