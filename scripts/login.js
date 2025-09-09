@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    sessionStorage.setItem("loggedIn", "false");
     const inputField = document.querySelector(".input-field");
     /*const pageContent = document.querySelector(".page-content");*/
     const audio = document.getElementById("bg-audio");
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const userInput = inputField.value;
 
         if (userInput === correctPIN) {
+            sessionStorage.setItem("loggedIn", "true");
             window.location.href = "pages/home.html";
         }
     });

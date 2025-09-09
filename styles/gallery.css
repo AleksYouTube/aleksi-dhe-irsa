@@ -4,41 +4,10 @@
     src: url('../fonts/Super Vanilla.ttf');
 }
 
-body {
-    position: absolute;
-
-    margin-right: 15px;
-    margin-left: 15px;
-
-    text-align: center;
-}
-/*
-.gallery-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: fixed;
-    top: 5vh;
-    height: 10vh;
-    left: 0;
-    width: 100%;
-    z-index: 8;
-}
-
-.gallery-title {
-    font-family: 'Super Vanilla';
-    font-size: 10vh;
-    text-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3);
-    color: aliceblue;
-    user-select: none;
-    line-height: 1;
-}*/
-
 .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 15px;
+    grid-gap: 0.5vw;
     grid-auto-flow: dense;
 
     margin-top: 5vh;
@@ -62,14 +31,22 @@ body {
     height: 100%;
     object-fit: contain;
     object-fit: cover;
-    /*background-color: #DF86BD;*/
+    background-color: #DF86BD;
     object-position: 50% 50%;
     cursor: pointer;
     transition: 0.25s ease-in-out;
 }
 
 .gallery-item:hover .image img {
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+#decor {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#decor:hover {
+    transform: scale(1);
 }
 
 .r1 {

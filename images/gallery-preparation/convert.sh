@@ -24,13 +24,13 @@ if [ ${#files[@]} -eq 0 ]; then
   exit 0
 fi
 
-# Convert all images to jpg and remove original
+# Convert all images to webp and remove original
 converted_files=()
 for f in "${files[@]}"; do
   # Get filename without extension
   base="${f%.*}"
-  # Convert to JPG in temp dir
-  newfile="${tmp_dir}/$(basename "${base}").jpg"
+  # Convert to WEBP in temp dir
+  newfile="${tmp_dir}/$(basename "${base}").webp"
   convert "$f" "$newfile"
   if [ $? -eq 0 ]; then
     rm "$f"
@@ -49,7 +49,7 @@ declare -A used_names
 for img in "${converted_files[@]}"; do
   # Compute SHA-256 hash of image content and take first 10 characters
   hash=$(sha256sum "$img" | awk '{print $1}' | cut -c1-10)
-  new_filename="${hash}.jpg"
+  new_filename="${hash}.webp"
 
   # If hash already exists, skip (duplicate image)
   if [[ -e "./$new_filename" ]]; then
@@ -68,3 +68,4 @@ done
 rm -r "$tmp_dir"
 
 echo "Processing complete. HTML snippets saved in $output_file."
+
