@@ -42,6 +42,6 @@
     </img>
     </div>
 
-    <script src="../scripts/loginConfirmation.js"></script>
+    <script>(function () { if (sessionStorage.getItem("loggedIn") != "true") { window.location.href = "../index.html"; }})();</script>
 </body>
 </html>
