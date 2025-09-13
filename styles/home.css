@@ -25,4 +25,30 @@
     color: aliceblue;
     user-select: none;
     line-height: 1;
+
+    opacity: 1;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 15vh;
+    bottom: 25vh;
+    left: 0vw;
+    right: 0vw;
+}
+
+.image img {
+    height: 100%;
+
+    filter: drop-shadow(0 0 1vh rgb(255, 255, 255))
+            drop-shadow(0 0 1vh rgb(255, 255, 255))
+            drop-shadow(0 0 1vh rgb(255, 255, 255))
+            drop-shadow(0 0 1vh rgb(255, 255, 255))
+            drop-shadow(0 0 1vh rgb(255, 255, 255));
+
+    opacity: 0;
 }
