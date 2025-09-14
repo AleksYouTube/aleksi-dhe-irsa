@@ -25,6 +25,7 @@
     color: aliceblue;
     user-select: none;
     line-height: 1;
+    text-align: center;
 
     opacity: 1;
 }

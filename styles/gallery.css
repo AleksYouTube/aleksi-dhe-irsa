@@ -49,6 +49,26 @@
     transform: scale(1);
 }
 
+.kaq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1vh 20vw;
+
+    aspect-ratio: 2 / 1;
+}
+
+.kaq span{
+    position: relative;
+    font-size: 6vw;
+    text-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3);
+    color: aliceblue;
+    user-select: none;
+    line-height: 1;
+    text-align: center;
+}
+
 .r1 {
     grid-row: span 1;
 }
