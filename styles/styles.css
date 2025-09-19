@@ -67,9 +67,20 @@ nav {
     line-height: 1; /* No need to match the height exactly */
 }
 
-.navigation-list li a:hover {
+.navigation-list li a:not(.jojo-button):hover {
     color: aliceblue;
     background-color: #DF86BD;
     border-radius: 30px;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+.jojo-button img {
+    height: 30px;
+}
+
+.jojo-button:hover img {
+    filter: drop-shadow(2px 2px 2px white)
+            drop-shadow(2px -2px 2px white)
+            drop-shadow(-2px 2px 2px white)
+            drop-shadow(-2px -2px 2px white);
 }
