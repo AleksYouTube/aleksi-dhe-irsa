@@ -28,6 +28,7 @@
     text-align: center;
 
     opacity: 1;
+    transition: opacity 1s ease-in-out;
 }
 
 .image {
@@ -40,6 +41,8 @@
     bottom: 25vh;
     left: 0vw;
     right: 0vw;
+
+    opacity: 0;
 }
 
 .image img {
@@ -50,6 +53,13 @@
             drop-shadow(0 0 1vh rgb(255, 255, 255))
             drop-shadow(0 0 1vh rgb(255, 255, 255))
             drop-shadow(0 0 1vh rgb(255, 255, 255));
+    
+    user-select: none;
 
     opacity: 0;
+}
+
+.image {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
 }
