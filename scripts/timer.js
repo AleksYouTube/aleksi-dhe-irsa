@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const targetDate = new Date("2025-10-17T00:00:00");
+  const targetDate = new Date("2025-10-10T23:50:00");
 
   // const targetDate = new Date();
   // targetDate.setSeconds(targetDate.getSeconds() + 7);
