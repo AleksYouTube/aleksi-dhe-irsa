@@ -4,33 +4,6 @@
     src: url('../fonts/Super Vanilla.ttf');
 }
 
-/* ========== Timer Section ========== */
-
-#timer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: fixed;
-    top: 5vh;
-    bottom: 10vh;
-    left: 0vw;
-    right: 0vw;
-}
-
-.timer-text {
-    position: relative;
-    font-size: 8vw;
-    text-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3);
-    color: aliceblue;
-    user-select: none;
-    line-height: 1;
-    text-align: center;
-
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
-}
-
 .image {
     display: flex;
     justify-content: center;
@@ -41,8 +14,6 @@
     bottom: 25vh;
     left: 0vw;
     right: 0vw;
-
-    opacity: 0;
 }
 
 .image img {
@@ -55,11 +26,4 @@
             drop-shadow(0 0 1vh rgb(255, 255, 255));
     
     user-select: none;
-
-    opacity: 0;
-}
-
-.image {
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
 }
