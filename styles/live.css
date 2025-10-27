@@ -1,0 +1,38 @@
+/* ========== Fonts ========== */
+@font-face {
+    font-family: 'Super Vanilla';
+    src: url('../fonts/Super Vanilla.ttf');
+}
+
+#stream-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 15vh;
+    bottom: 25vh;
+    left: 0vw;
+    right: 0vw;
+
+    color: aliceblue;
+    font-size: 2vw;
+}
+/*
+.image img {
+    height: 100%;
+
+    filter: drop-shadow(0 0 1vh rgb(255, 255, 255))
+            drop-shadow(0 0 1vh rgb(255, 255, 255))
+            drop-shadow(0 0 1vh rgb(255, 255, 255))
+            drop-shadow(0 0 1vh rgb(255, 255, 255))
+            drop-shadow(0 0 1vh rgb(255, 255, 255));
+    
+    user-select: none;
+}*/
+
+iframe {
+      width: 80%;
+      height: 450px;
+      max-width: 800px;
+    }
