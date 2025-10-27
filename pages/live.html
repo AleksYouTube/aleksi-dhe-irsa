@@ -24,7 +24,23 @@
     </div>
 
     <script>
-    const apiKey = "AIzaSyAvn_G9vaG7CkM43FV3wnGOu0go04VG1E0";
+    let apiKey;
+
+    fetch("../gglapi.txt")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Could not fetch PIN file.");
+            }
+            return response.text();
+        })
+        .then(text => {
+            apiKey = text.trim();
+        })
+        .catch(error => {
+            console.error("Error fetching PIN:", error);
+            return;
+        });
+
     const channelId = "UCXz4zBBilbZ5FUmQlkF3zrQ";
 
     async function checkLive() {
