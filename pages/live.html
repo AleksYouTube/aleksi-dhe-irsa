@@ -15,57 +15,22 @@
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a>LIVE</a></li>
-                <li><a href="jojo.html" class="jojo-button"><img src="../images/jojo-logo.webp" alt=""></a></li>
+                <li><a href="jojo.html" class="jojo-button"><img src="../images/sbr-logo.png" alt=""></a></li>
                 <li><a href="../index.html">Log out</a></li>
             </ul>
         </nav>
     </header>
-    <div id="stream-container">Checking live status...
+    <div id="stream-container">
+        <iframe
+            src="https://player.twitch.tv/?channel=dedpupu&parent=aleksidheirsa.com&parent=localhost"
+            frameborder="0"
+            allowfullscreen
+            scrolling="no">
+        </iframe>
     </div>
-
-    <script>
-    let apiKey;
-
-    fetch("../gglapi.txt")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Could not fetch PIN file.");
-            }
-            return response.text();
-        })
-        .then(text => {
-            apiKey = text.trim();
-        })
-        .catch(error => {
-            console.error("Error fetching PIN:", error);
-            return;
-        });
-
-    const channelId = "UCXz4zBBilbZ5FUmQlkF3zrQ";
-
-    async function checkLive() {
-        const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&eventType=live&type=video&key=${apiKey}`;
-        const response = await fetch(url);
-        const data = await response.json();
-        const container = document.getElementById("stream-container");
-
-        if (data.items && data.items.length > 0) {
-            // Live video found
-            const videoId = data.items[0].id.videoId;
-            container.innerHTML = `
-            <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1"
-                    frameborder="0"
-                    allowfullscreen>
-            </iframe>`;
-        } else {
-            // Not live
-            container.innerHTML = `
-            <p>S'jam LIVE në këtë moment... 😔`;
-        }
-    }
-
-    checkLive();
-        </script>
+    <!-- <div id="offline-overlay">
+        <p>S'jam LIVE në këtë moment... 😔</p>
+    </div> -->
 </body>
 </html>
 
