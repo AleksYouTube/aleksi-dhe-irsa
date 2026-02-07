@@ -1,32 +1,86 @@
-/* ========== Fonts ========== */
 @font-face {
     font-family: 'Super Vanilla';
     src: url('../fonts/Super Vanilla.ttf');
 }
 
-.image {
+body {
+    margin: 0;
+    font-family: 'Super Vanilla', sans-serif;
+}
+
+.container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     position: fixed;
-    top: 15vh;
-    bottom: 25vh;
-    left: 0vw;
-    right: 0vw;
+    height: max(50vh, min(450px, 85vh));
+    /* width: max(50vw, min(500px, 95vw)); */
+    width: 1000px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 
-    color: aliceblue;
+    background-color: #f5d5ea;
+    border-radius: 1vw;
+
     font-size: xx-large;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
 }
 
-.image img {
-    height: 100%;
+.question {
+    height: 25%;
 
-    filter: drop-shadow(0 0 1vh rgb(255, 255, 255))
-            drop-shadow(0 0 1vh rgb(255, 255, 255))
-            drop-shadow(0 0 1vh rgb(255, 255, 255))
-            drop-shadow(0 0 1vh rgb(255, 255, 255))
-            drop-shadow(0 0 1vh rgb(255, 255, 255));
-    
-    user-select: none;
+    font-size: larger;
+
+    color: #df86bd;
+}
+
+.buttonArea {
+    display: flex;
+    justify-content: center;
+    /* center horizontally */
+    align-items: center;
+    /* center vertically */
+    gap: 2rem;
+    /* space between buttons */
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    position: relative;
+    /* keep relative for "No" button movement */
+    transform: scale(1);
+    /* initial scale */
+
+    font-family: 'Super Vanilla';
+    font-size: larger;
+}
+
+/* Yes button style */
+.yes {
+    background-color: #ff6fa3;
+    color: white;
+    width: 250px;
+    height: 75px;
+}
+
+/* No button style */
+.no {
+    background-color: #a3a3a3;
+    color: white;
+    width: 250px;
+    height: 75px;
+    transition: all 0.2s ease;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/home.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -21,11 +23,63 @@
             </ul>
         </nav>
     </header>
-    <div class="image">
-        <!-- <img src="../images/home/plane.webp" alt=""> -->
-        <span>I miss u 😔</span>
+    <!-- <div class="image"> -->
+    <!-- <img src="../images/home/plane.webp" alt=""> -->
+    <!-- <span>I miss u 😔</span> -->
+    <!-- </div> -->
+    <div class="container">
+        <div class="question">
+            Will you be my valentine?
+        </div>
+        <div class="buttonArea">
+            <div class="buttons-wrapper">
+                <button class="yes">Yes</button>
+                <button class="no">No</button>
+            </div>
+        </div>
     </div>
+
+    <script>
+        const noBtn = document.querySelector('.no');
+        const yesBtn = document.querySelector('.yes');
+        const container = document.querySelector('.buttonArea');
+        let scale1 = 1; // initial size
+        let scale2 = 1; // initial size
+        let hoverCount = 0;
+
+        noBtn.addEventListener('mouseenter', () => {
+            const containerRect = container.getBoundingClientRect();
+            const btnRect = noBtn.getBoundingClientRect();
+
+            const maxX = containerRect.width - btnRect.width;
+            const maxY = containerRect.height - btnRect.height;
+
+            let randomX = Math.random() * 500;
+            let randomY = Math.random() * 500;
+
+            // Set relative movement using transform instead of absolute positioning
+            noBtn.style.transform = `translate(${randomX}%, ${randomY}%) scale(${scale2})`;
+
+            scale1 += 0.05;
+            scale2 -= 0.01;
+            yesBtn.style.transform = `scale(${scale1})`;
+
+            hoverCount++;
+        });
+
+
+        yesBtn.addEventListener('click', () => {
+            if (hoverCount > 0) {
+                alert("Pra ti u mundove " + hoverCount + " here te shtypje 'no'... 😒");
+            }
+            else {
+                alert("I'm the luckiest guy in the world 😍🥰💖 \n\n(e di qe provove te shtypesh 'no' dhe kur te doli mesazhi tjeter e bere refresh faqen qe te shtypje 'yes')");
+            }
+        });
+    </script>
+
 </body>
+
 </html>
 
-<script>(function () { if (sessionStorage.getItem("loggedIn") != "true") { window.location.href = "../index.html"; }})();</script>
+<script>(function () { if (sessionStorage.getItem("loggedIn") != "true") { window.location.href = "../index.html"; } })();</script>
