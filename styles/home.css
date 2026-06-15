@@ -16,7 +16,6 @@ body {
 
     position: fixed;
     height: max(50vh, min(450px, 85vh));
-    /* width: max(50vw, min(500px, 95vw)); */
     width: 1000px;
     left: 50%;
     top: 50%;
@@ -29,28 +28,26 @@ body {
     text-align: center;
     padding: 2rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+    color: #DF86BD;
 }
 
-.question {
+/* .question {
     height: 25%;
 
     font-size: larger;
 
     color: #df86bd;
-}
+} */
 
-.buttonArea {
+/* .buttonArea {
     display: flex;
     justify-content: center;
-    /* center horizontally */
     align-items: center;
-    /* center vertically */
     gap: 2rem;
-    /* space between buttons */
     width: 100%;
     height: 50%;
     position: relative;
-}
+} */
 
 button {
     padding: 1rem 2rem;
@@ -68,19 +65,17 @@ button {
     font-size: larger;
 }
 
-/* Yes button style */
-.yes {
+/* .yes {
     background-color: #ff6fa3;
     color: white;
     width: 250px;
     height: 75px;
 }
 
-/* No button style */
 .no {
     background-color: #a3a3a3;
     color: white;
     width: 250px;
     height: 75px;
     transition: all 0.2s ease;
-}
+} */
