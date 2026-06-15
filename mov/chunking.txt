@@ -1,0 +1,7 @@
+ffmpeg -i input.mp4 \
+  -c:v copy -c:a copy \
+  -f hls \
+  -hls_time 300 \
+  -hls_playlist_type vod \
+  -hls_segment_filename "chunk_%03d.ts" \
+  playlist.m3u8
