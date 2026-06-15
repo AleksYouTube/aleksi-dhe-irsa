@@ -1,0 +1,18 @@
+/* ========== Fonts ========== */
+@font-face {
+    font-family: 'Super Vanilla';
+    src: url('../fonts/Super Vanilla.ttf');
+}
+
+#nhhad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 25vh;
+    left: 5vh;
+    right: 5vh;
+    
+    margin: 0 auto;
+}

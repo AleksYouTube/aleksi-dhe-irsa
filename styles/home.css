@@ -31,24 +31,6 @@ body {
     color: #DF86BD;
 }
 
-/* .question {
-    height: 25%;
-
-    font-size: larger;
-
-    color: #df86bd;
-} */
-
-/* .buttonArea {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-    height: 50%;
-    position: relative;
-} */
-
 button {
     padding: 1rem 2rem;
     font-size: 1.2rem;
@@ -64,18 +46,3 @@ button {
     font-family: 'Super Vanilla';
     font-size: larger;
 }
-
-/* .yes {
-    background-color: #ff6fa3;
-    color: white;
-    width: 250px;
-    height: 75px;
-}
-
-.no {
-    background-color: #a3a3a3;
-    color: white;
-    width: 250px;
-    height: 75px;
-    transition: all 0.2s ease;
-} */
